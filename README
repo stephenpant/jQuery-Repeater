@@ -1,0 +1,11 @@
+
+jQuery Repeater v0.2
+
+=============================================================
+	Copyright 2010 Stephen Pant <stephenpant@gmail.com>
+	http://stephenpant.tumblr.com/
+
+	Licensed jointly under the GPL and MIT licenses
+=============================================================
+
+A repeater control for jQuery. Specify a template, then populate with an array of objects. 
