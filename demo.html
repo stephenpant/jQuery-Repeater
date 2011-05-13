@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-repeater.js"></script>
+
+	<style>
+		.innerRepeaterDiv {
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			 $("#repeaterDiv").repeater([
+                {id: 1, name: "Ruby"},
+                {id: 2, name: "Python"},
+                {id: 3, name: "JavaScript"},
+                {id: 4, name: "ActionScript"},
+                {id: 5, name: "Scheme"},
+                {id: 6, name: "Lisp"},
+                {id: 7, name: "C#"},
+                {id: 8, name: "Fortran"},
+                {id: 9, name: "Visual Basic"},
+                {id: 10, name: "C"},
+                {id: 11, name: "C++"},
+                {id: 12, name: "Java"}
+            ]);
+										
+			 $(".innerRepeaterDiv").repeater([
+				{id: 1, name: 'High'},
+				{id: 2, name: 'Medium'},
+				{id: 3, name: 'Low'}
+			], "inner");
+		});
+	</script> 
+</head>
+
+<body>
+	<div id="repeaterDiv"> 
+		<input type="checkbox" value="{id}" /> {name}
+		<div class="innerRepeaterDiv"> 
+			<input type="checkbox" value="{inner.id}" /> {inner.name}
+		</div>
+	</div>
+</body>
+</html>
